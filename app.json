@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "holy-bible",
+    "name": "Holy-Bible",
     "slug": "holy-bible",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0901c125-8b42-4fca-9cfc-732074e0bcfb"
+      }
+    },
+    "owner": "oseelabs-expo"
   }
 }

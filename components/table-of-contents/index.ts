@@ -1,0 +1,1 @@
+export { TestamentList } from './TestamentList';

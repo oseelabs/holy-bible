@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Holy-Bible",
+    "name": "Holy Bible",
     "slug": "holy-bible",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,11 +16,13 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "org.oseelabs.books.bible",
+      "minSdkVersion": 31
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -32,6 +34,79 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-asset",
+        {
+          "assets": ["./assets/images/jesus"]
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter.ttf",
+            "./assets/fonts/Galada-Regular.ttf",
+            "./assets/fonts/SpaceMono-Regular.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Inter",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/Inter.ttf",
+                    "weight": 500
+                  }
+                ]
+              },
+              {
+                "fontFamily": "Galada",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/Galada-Regular.ttf",
+                    "weight": 500
+                  },
+                  {
+                    "path": "./assets/fonts/Galada-Regular.ttf",
+                    "weight": 400
+                  },
+                  {
+                    "path": "./assets/fonts/Galada-Regular.ttf",
+                    "weight": 300
+                  },
+                  {
+                    "path": "./assets/fonts/Galada-Regular.ttf",
+                    "weight": 200
+                  }
+                ]
+              },
+              {
+                "fontFamily": "SpaceMono",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/SpaceMono-Regular.ttf",
+                    "weight": 500
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true,
+          "useSQLCipher": true,
+          "android": {
+            "enableFTS": false,
+            "useSQLCipher": false
+          },
+          "ios": {
+            "customBuildFlags": ["-DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_SNAPSHOT=1"]
+          }
         }
       ]
     ],

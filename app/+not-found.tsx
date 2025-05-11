@@ -1,22 +1,22 @@
 import { Stack } from "expo-router";
 import React from "react";
-import {Text, View} from "react-native";
-
+import {SafeAreaView, Text, View} from "react-native";
+import {Drawer} from "expo-router/drawer";
 
 export default function NotFound() {
 	return (
-	  <>
-		  <Stack.Screen
+	  <SafeAreaView>
+		  <Drawer.Screen
 		    options={{
 			  title: "Oops!",
 			  headerShown: false,
 		    }}
 		  />
-		  <View>
+		  <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
 			  <Text>
 				  This isn't the page you're looking for...
 			  </Text>
 		  </View>
-	  </>
+	  </SafeAreaView>
 	)
 }
